@@ -25,11 +25,31 @@ except ModuleNotFoundError:
 def scenarios_list():
     """Returns an array of available scenarios."""
     return np.array([
-        "city_0_newyork", "city_1_losangeles", "city_2_chicago", "city_3_houston", 
-        "city_4_phoenix", "city_5_philadelphia", "city_6_miami", "city_7_sandiego", 
-        "city_8_dallas", "city_9_sanfrancisco", "city_10_austin", "city_11_santaclara", 
-        "city_12_fortworth", "city_13_columbus", "city_14_charlotte_3p5", "city_15_indianapolis", 
-        "city_17_seattle", "city_18_denver", "city_19_oklahoma", "O1_3p5B","O1_3p5"
+        "city_0_newyork",
+        "city_1_losangeles",
+        "city_2_chicago",
+        "city_3_houston",
+        "city_4_phoenix",
+        "city_5_philadelphia",
+        "city_6_miami",
+        "city_7_sandiego",
+        "city_8_dallas",
+        "city_9_sanfrancisco",
+        "city_10_austin",
+        "city_11_santaclara",
+        "city_12_fortworth",
+        "city_13_columbus",
+        "city_14_charlotte_3p5",
+        "city_15_indianapolis",
+        "city_17_seattle",
+        "city_18_denver",
+        "city_19_oklahoma",
+        "O1_3p5B",
+        "O1_3p5",
+        "O1_3p5_v1",
+        "O1_3p5_v2",
+        "Boston5G_3p5",
+        "asu_campus1"
     ])
 
 #%% Token Generation
@@ -228,6 +248,10 @@ def get_parameters(scenario):
         'n_rows': 71,
         'n_per_row': 96
     },
+    'city_14_charlotte_3p5': {
+        'n_rows': 216,
+        'n_per_row': 177
+    },
     'city_15_indianapolis': {
         'n_rows': 80,
         'n_per_row': 79
@@ -251,6 +275,22 @@ def get_parameters(scenario):
     'O1_3p5': {
         'n_rows': 2751,
         'n_per_row': 181
+    },
+    'Boston5G_3p5': {
+        'n_rows': [1000, 2000],
+        'n_per_row': 1200
+    },
+    'O1_3p5_v1': {
+        'n_rows': [0, 1*int(2751/20)],
+        'n_per_row': 181
+    },
+    'O1_3p5_v2': {
+        'n_rows': [1*int(2751/20), 2*int(2751/20)],
+        'n_per_row': 181
+    },
+    'asu_campus1': {
+        'n_rows': 664,
+        'n_per_row': 591
     }}
   
     parameters = DeepMIMOv3.default_params()
@@ -262,20 +302,21 @@ def get_parameters(scenario):
     # Point to scenarios folder
     parameters['dataset_folder'] = os.path.join(project_root, "scenarios")
     # parameters['dataset_folder'] = '/media/ronit/SharedVolume/lwm_project/LWM/scenarios'
-    parameters['scenario'] = scenario
+    scenario_base = scenario.split("_v")[0]
+    parameters['scenario'] = scenario_base
     
-    if scenario == 'O1_3p5':
+    if scenario_base == 'O1_3p5':
         parameters['active_BS'] = np.array([4])
-    elif scenario in ['city_18_denver', 'city_15_indianapolis']:
+    elif scenario_base in ['city_18_denver', 'city_15_indianapolis']:
         parameters['active_BS'] = np.array([3])
     else:
         parameters['active_BS'] = np.array([1])
         
-    if scenario == 'Boston5G_3p5':
+    if isinstance(row_column_users[scenario]['n_rows'], int):
+        parameters['user_rows'] = np.arange(row_column_users[scenario]['n_rows'])
+    else:
         parameters['user_rows'] = np.arange(row_column_users[scenario]['n_rows'][0],
                                             row_column_users[scenario]['n_rows'][1])
-    else:
-        parameters['user_rows'] = np.arange(row_column_users[scenario]['n_rows'])
     parameters['bs_antenna']['shape'] = np.array([n_ant_bs, 1]) # Horizontal, Vertical 
     parameters['bs_antenna']['rotation'] = np.array([0,0,-135]) # (x,y,z)
     parameters['ue_antenna']['shape'] = np.array([n_ant_ue, 1])
