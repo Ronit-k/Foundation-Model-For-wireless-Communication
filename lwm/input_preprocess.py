@@ -286,12 +286,13 @@ def get_parameters(scenario):
             'n_per_row': 595
     },
     'O1_3p5_v1': {
-        'n_rows': [0, 1*int(2751/20)],
+        'n_rows': 3852,
         'n_per_row': 181
     },
     'O1_3p5_v2': {
-        'n_rows': [1*int(2751/20), 2*int(2751/20)],
-        'n_per_row': 181
+        'n_rows': [3853, 5203],
+            'n_per_row': 361,
+            'n_cols_use': 181
     },
     'asu_campus1': {
         'n_rows': 321,
