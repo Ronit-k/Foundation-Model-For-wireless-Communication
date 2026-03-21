@@ -1,0 +1,65 @@
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 64])
+epochs: 30, batch size: 32, input type: cls_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 58.64% | Test F1: 0.5805
+
+Split Ratio: 0.01 | Test Accuracy: 66.63% | Test F1: 0.6601
+
+Split Ratio: 0.05 | Test Accuracy: 79.82% | Test F1: 0.7959
+
+Split Ratio: 0.1 | Test Accuracy: 83.64% | Test F1: 0.8351
+
+Split Ratio: 0.2 | Test Accuracy: 85.90% | Test F1: 0.8576
+
+Split Ratio: 0.4 | Test Accuracy: 87.59% | Test F1: 0.8748
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 128, 64])
+epochs: 30, batch size: 32, input type: channel_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 82.31% | Test F1: 0.8196
+
+Split Ratio: 0.01 | Test Accuracy: 87.16% | Test F1: 0.8694
+
+Split Ratio: 0.05 | Test Accuracy: 92.91% | Test F1: 0.9287
+
+Split Ratio: 0.1 | Test Accuracy: 94.13% | Test F1: 0.9410
+
+Split Ratio: 0.2 | Test Accuracy: 95.27% | Test F1: 0.9525
+
+Split Ratio: 0.4 | Test Accuracy: 95.96% | Test F1: 0.9592
+
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 64])
+epochs: 150, batch size: 1024, input type: cls_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 54.82% | Test F1: 0.5436
+
+Split Ratio: 0.01 | Test Accuracy: 61.32% | Test F1: 0.6060
+
+Split Ratio: 0.05 | Test Accuracy: 77.04% | Test F1: 0.7686
+
+Split Ratio: 0.1 | Test Accuracy: 81.21% | Test F1: 0.8102
+
+Split Ratio: 0.2 | Test Accuracy: 83.61% | Test F1: 0.8340
+
+Split Ratio: 0.4 | Test Accuracy: 85.55% | Test F1: 0.8537
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 64])
+epochs: 30, batch size: 32, input type: cls_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 58.21% | Test F1: 0.5750
+
+Split Ratio: 0.01 | Test Accuracy: 66.41% | Test F1: 0.6597
+
+Split Ratio: 0.05 | Test Accuracy: 79.76% | Test F1: 0.7957
+
+Split Ratio: 0.1 | Test Accuracy: 83.47% | Test F1: 0.8335
+
+Split Ratio: 0.2 | Test Accuracy: 85.84% | Test F1: 0.8571
+
+Split Ratio: 0.4 | Test Accuracy: 87.45% | Test F1: 0.8732

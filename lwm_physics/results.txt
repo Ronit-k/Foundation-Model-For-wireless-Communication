@@ -1,0 +1,32 @@
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 64])
+epochs: 30, batch size: 2048, input type: cls_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 61.61% | Test F1: 0.6056
+
+Split Ratio: 0.01 | Test Accuracy: 67.82% | Test F1: 0.6692
+
+Split Ratio: 0.05 | Test Accuracy: 76.87% | Test F1: 0.7639
+
+Split Ratio: 0.1 | Test Accuracy: 79.18% | Test F1: 0.7884
+
+Split Ratio: 0.2 | Test Accuracy: 80.59% | Test F1: 0.8028
+
+Split Ratio: 0.4 | Test Accuracy: 81.76% | Test F1: 0.8141
+
+---------------------------- training Details ----------------------------
+Dataset Size: 519636, shape: torch.Size([519636, 128, 64])
+epochs: 30, batch size: 2048, input type: channel_emb
+task: Beam Prediction
+Split Ratio: 0.005 | Test Accuracy: 73.36% | Test F1: 0.7275
+
+Split Ratio: 0.01 | Test Accuracy: 80.38% | Test F1: 0.8025
+
+Split Ratio: 0.05 | Test Accuracy: 89.89% | Test F1: 0.8979
+
+Split Ratio: 0.1 | Test Accuracy: 92.47% | Test F1: 0.9239
+
+Split Ratio: 0.2 | Test Accuracy: 93.66% | Test F1: 0.9363
+
+Split Ratio: 0.4 | Test Accuracy: 94.54% | Test F1: 0.9451
