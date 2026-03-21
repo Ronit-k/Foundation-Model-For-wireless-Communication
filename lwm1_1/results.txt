@@ -15,27 +15,3 @@ Split Ratio: 0.2 | Test Accuracy: 21.10% | Test F1: 0.1591
 
 Split Ratio: 0.4 | Test Accuracy: 23.55% | Test F1: 0.2110
 
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 128])
-epochs: 30, batch size: 32, input type: cls_emb
-task: Beam Prediction
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 128])
-epochs: 30, batch size: 32, input type: cls_emb
-task: Beam Prediction
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 128])
-epochs: 30, batch size: 32, input type: cls_emb
-task: Beam Prediction
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 128])
-epochs: 30, batch size: 32, input type: cls_emb
-task: Beam Prediction
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 128])
-epochs: 30, batch size: 32, input type: cls_emb
-task: Beam Prediction
----------------------------- training Details ----------------------------
-Dataset Size: 1298, shape: torch.Size([1298, 64, 128])
-epochs: 30, batch size: 32, input type: channel_emb
-task: Beam Prediction
