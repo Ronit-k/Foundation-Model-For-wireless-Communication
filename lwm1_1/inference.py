@@ -29,14 +29,17 @@ def lwm_inference(model, data, input_type="cls_emb", device="cpu", batch_size=64
                 for batch in t:
                     
                     input_ids = batch[0].to(device)
-                    output = model(input_ids)[0]
+                    # Output is on the GPU
+                    output = model(input_ids)[0] 
                     
                     if input_type == "cls_emb":
                         batch_embeddings = output[:, 0, :] 
-                        embeddings.append(batch_embeddings)
+                        # FIX: Move to CPU before appending
+                        embeddings.append(batch_embeddings.cpu()) 
                     elif input_type == "channel_emb":
                         batch_embeddings = output[:, 1:, :] 
-                        embeddings.append(batch_embeddings)
+                        # FIX: Move to CPU before appending
+                        embeddings.append(batch_embeddings.cpu())
                         
         output_total = torch.cat(embeddings, dim=0).float()
         
