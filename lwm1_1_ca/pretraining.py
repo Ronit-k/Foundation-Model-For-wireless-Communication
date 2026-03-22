@@ -99,8 +99,8 @@ def parse_args() -> argparse.Namespace:
             "O1_3p5_v1",
             "O1_3p5_v2",
             "Boston5G_3p5",
-            "asu_campus1",
-            "Boston5G_3p5_RIS"
+            "asu_campus1"
+            # "Boston5G_3p5_RIS"
             # "city_0_newyork",
             # "city_1_losangeles",
             # "city_2_chicago",
