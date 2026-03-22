@@ -53,9 +53,9 @@ scenario_names = np.array([
     "city_4_phoenix", "city_5_philadelphia", "city_6_miami", "city_7_sandiego",
     "city_8_dallas", "city_9_sanfrancisco", "city_10_austin", "city_11_santaclara",
     "city_12_fortworth", "city_13_columbus", "city_15_indianapolis", "city_17_seattle",
-    "city_18_denver", "city_19_oklahoma", "O1_3p5B", "O1_3p5"])
+    "city_18_denver", "city_19_oklahoma", "O1_3p5B"])
 #################################################### Select the first scenario (index 0) – adjust as needed##################################################
-scenario_idxs = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19])[0:19]
+scenario_idxs = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18])[0:19]
 selected_scenario_names = scenario_names[scenario_idxs]
 print("selected scenarios: ")
 for i in selected_scenario_names: print(i, end=", ")
